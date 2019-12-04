@@ -130,3 +130,6 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=7)
 }
+
+# Not for "real" production apps
+CORS_ORIGIN_ALLOW_ALL = True
