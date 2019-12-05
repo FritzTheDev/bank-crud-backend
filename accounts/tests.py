@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 
 class AccountModelTests(TestCase):
+    test_username = "Freddie Firestarter"
     test_account_name = "Vacation Fund"
 
     def setUp(self):
@@ -14,4 +15,5 @@ class AccountModelTests(TestCase):
 
     def test_string_representation(self):
         test_account = Account.objects.get(name=self.test_account_name)
-        self.assertEqual(str(test_account), self.test_account_name)
+        self.assertEqual(str(test_account),
+                         f"{self.test_username}'s {self.test_account_name}")
