@@ -29,6 +29,6 @@ class Account(Model):
     )
     type = CharField(max_length=3, choices=account_type_choices)
 
-    name = CharField(40)
+    name = CharField(max_length=40)
     # Make sure to document that this is in cents, not (dollars/euros/etc)
     balance = IntegerField(default=0)
