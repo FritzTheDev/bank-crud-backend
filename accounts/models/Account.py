@@ -11,7 +11,9 @@ account_type_choices = (
 
 class Account(Model):
     """
-    Represents a bank account.
+    Represents a bank account held by a user.
+
+    Can be of type Checking, Savings, or Money Market
     """
     owner = ForeignKey(to='auth.User', on_delete=CASCADE,
                        related_name='accounts')
