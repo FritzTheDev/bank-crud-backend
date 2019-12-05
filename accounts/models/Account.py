@@ -27,6 +27,6 @@ class Account(Model):
         (SAVINGS, 'Savings'),
         (MONEY_MARKET, 'Money Market'),
     )
-    type = CharField(max_length=3)
+    type = CharField(max_length=3, choices=account_type_choices)
     # Make sure to document that this is in cents, not (dollars/euros/etc)
     balance = IntegerField(default=0)
