@@ -32,3 +32,6 @@ class Account(Model):
     name = CharField(max_length=40)
     # Make sure to document that this is in cents, not (dollars/euros/etc)
     balance = IntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.owner.username}'s {self.name}"
