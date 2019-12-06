@@ -2,8 +2,8 @@ from django.db.models import Model, CharField, IntegerField, ForeignKey, CASCADE
 
 
 class Transaction(Model):
-    WITHDRAWAL = "WITH"
-    DEPOSIT = "DEPS"
+    WITHDRAWAL = "Withdrawal"
+    DEPOSIT = "Deposit"
 
     type_choices = (
         (WITHDRAWAL, 'Withdrawal'),
