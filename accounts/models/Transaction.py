@@ -13,5 +13,8 @@ class Transaction(Model):
     account = ForeignKey('accounts.Account',
                          on_delete=CASCADE, related_name='transactions')
 
-    type = CharField(choices=type_choices, max_length=4)
+    type = CharField(choices=type_choices, max_length=10)
     amount = IntegerField()
+
+    def __str__(self):
+        return f"{self.account} - ${self.amount} {self.type}"
