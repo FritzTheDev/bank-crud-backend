@@ -13,4 +13,5 @@ class Transaction(Model):
     account = ForeignKey('accounts.Account',
                          on_delete=CASCADE, related_name='transactions')
 
+    type = CharField(choices=type_choices, max_length=4)
     amount = IntegerField()
