@@ -4,9 +4,9 @@ from rest_framework.serializers import PrimaryKeyRelatedField, ModelSerializer
 
 
 class UserSerializer(ModelSerializer):
-    snippets = PrimaryKeyRelatedField(
+    accounts = PrimaryKeyRelatedField(
         many=True, queryset=Account.objects.all())
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'snippets']
+        fields = ['id', 'username', 'accounts']
