@@ -12,6 +12,7 @@ djangorestframework-simplejwt = "*"
 django-cors-headers = "*"
 django-heroku = "*"
 psycopg2 = "==2.7.7"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.7"
