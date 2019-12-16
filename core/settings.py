@@ -69,15 +69,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cool01db',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': 'localhost',  # '127.0.0.1' probably works also
-        'PORT': '5432',
-    }
+    'default': {}
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -132,5 +126,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 django_heroku.settings(locals())
 
 
-DATABASES['default'] = dj_database_url.config(
-    conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.parse(os.environ.get(
+    'DATABASE_URL', 'postgres://localhost:5432/account-app'), conn_max_age=600)
