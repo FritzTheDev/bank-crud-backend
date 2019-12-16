@@ -126,5 +126,4 @@ CORS_ORIGIN_ALLOW_ALL = True
 django_heroku.settings(locals())
 
 
-DATABASES['default'] = dj_database_url.parse(os.environ.get(
-    'DATABASE_URL'), conn_max_age=600)
+DATABASES['default'] = os.environ.get('DATABASE_URL')
