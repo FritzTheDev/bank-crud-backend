@@ -1,6 +1,5 @@
 import os
 from django.utils.timezone import timedelta
-import dj_database_url
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -71,8 +70,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {}
 }
+database_url = os.environ.get('DATABASE_URL')
 
-DATABASES['default'] = os.environ.get('DATABASE_URL')
+DATABASES['default'] = database_url
 
 
 # Password validation
