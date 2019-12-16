@@ -70,8 +70,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'cool01db',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',  # '127.0.0.1' probably works also
+        'PORT': '5432',
     }
 }
 
