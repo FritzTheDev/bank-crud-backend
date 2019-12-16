@@ -127,4 +127,4 @@ django_heroku.settings(locals())
 
 
 DATABASES['default'] = dj_database_url.parse(os.environ.get(
-    'DATABASE_URL', 'postgres://localhost:5432/account-app'), conn_max_age=600, ssl_require=True)
+    'DATABASE_URL', 'postgres://localhost:5432/account-app'), conn_max_age=600)
