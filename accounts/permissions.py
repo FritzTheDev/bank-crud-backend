@@ -1,7 +1,7 @@
-from rest_framework.permissions import BasePermission,
+from rest_framework.permissions import BasePermission
 
 
-class IsUserOwner(BasePermission):
+class IsUser(BasePermission):
     """
     Custom Permission checking if the user owns the account they're accessing
     """
