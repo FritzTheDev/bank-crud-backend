@@ -71,7 +71,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
 }
 DATABASES['default'] = dj_database_url.config(
-    default='postgres://localhost:5432/account-app')
+    conn_max_age=600, ssl_require=True)
 
 
 # Password validation
