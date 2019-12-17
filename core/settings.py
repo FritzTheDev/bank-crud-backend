@@ -1,6 +1,7 @@
-import os
 from django.utils.timezone import timedelta
 import django_heroku
+import os
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -71,6 +72,7 @@ DATABASES = {
     'default': {}
 }
 
+print(os.environ)
 database_url = os.environ['DATABASE_URL']
 DATABASES['default'] = database_url
 
